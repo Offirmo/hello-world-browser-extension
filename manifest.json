@@ -48,12 +48,7 @@
 		"default_title": "hello-world-webextension browser_action icon !",
 		"default_popup": "popup.html"
 	},
-	"page_action": {
-		"browser_style": true,
-		"default_icon": {
-			"48": "icons/icon_48x48.png"
-		},
-		"default_title": "hello-world-webextension page_action !",
-		"default_popup": "popup.html"
+	"options_ui": {
+		"page": "options.html"
 	}
 }
