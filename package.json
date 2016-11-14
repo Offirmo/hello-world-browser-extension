@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-webextension",
+  "name": "hello-world-browser-extension",
   "version": "0.0.1",
   "description": "Trying to do a webextension",
   "main": "src/index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Offirmo/hello-world-webextension.git"
+    "url": "git+https://github.com/Offirmo/hello-world-browser-extension.git"
   },
   "author": "Offirmo <offirmo.net@gmail.com>",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/Offirmo/hello-world-webextension/issues"
+    "url": "https://github.com/Offirmo/hello-world-browser-extension/issues"
   },
-  "homepage": "https://github.com/Offirmo/hello-world-webextension#readme",
+  "homepage": "https://github.com/Offirmo/hello-world-browser-extension#readme",
   "dependencies": {
     "lodash": "^4.15.0"
   }

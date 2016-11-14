@@ -1,4 +1,4 @@
-# hello-world-webextension
+# hello-world-browser-extension
 
 The simplest, most trivial browser extension, featuring:
 * content script (aka. injected)
