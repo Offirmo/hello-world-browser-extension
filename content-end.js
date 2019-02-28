@@ -1,1 +1,1 @@
-console.log('Hello from hello-world-browser-extension (content, end)')
+console.log('🧩 Hello from hello-world-browser-extension (content, end)')

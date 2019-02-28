@@ -1,4 +1,4 @@
-console.log('Hello from hello-world-browser-extension (background)')
+console.log('🧩 Hello from hello-world-browser-extension (background)')
 
 chrome.contextMenus.create({
 	id: "hello-world-browser-extension-1",
