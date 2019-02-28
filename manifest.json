@@ -1,40 +1,30 @@
 {
 	"manifest_version": 2,
 	"name": "hello-world-browser-extension",
+	"short_name": "hello world browser ext.",
 	"version": "0.1",
-	"description": "Test of a webextension",
 	"homepage_url": "https://github.com/Offirmo/hello-world-browser-extension",
+
+	"description": "Test of a webextension",
 	"icons": {
 		"48": "icons/icon_48x48.png",
 		"96": "icons/icon_96x96.png"
 	},
+
+	"browser_action": {
+		"default_icon": "icons/icon_48x48.png",
+		"default_title": "hello-world-browser-extension browser_action icon !",
+		"default_popup": "popup.html"
+	},
+
 	"permissions": [
-		"*://*",
-		"alarms",
-		"bookmarks",
 		"contextMenus",
-		"cookies",
-		"downloads",
-		"downloads.open",
-		"history",
-		"idle",
-		"management",
-		"nativeMessaging",
+		"debugger",
 		"notifications",
-		"storage",
-		"tabs",
-		"webNavigation",
-		"webRequest",
-		"webRequestBlocking",
-		"clipboardWrite: write",
-		"clipboardWrite: read",
-		"background",
-		"clipboardRead",
-		"clipboardWrite",
-		"geolocation",
-		"unlimitedStorage"
+		"storage"
 	],
 	"background": {
+		"persistent": false,
 		"scripts": ["background.js"]
 	},
 	"content_scripts": [
@@ -54,11 +44,6 @@
 			"js": ["content-idle.js"]
 		}
 	],
-	"browser_action": {
-		"default_icon": "icons/icon_48x48.png",
-		"default_title": "hello-world-browser-extension browser_action icon !",
-		"default_popup": "popup.html"
-	},
 	"options_ui": {
 		"page": "options.html"
 	}
