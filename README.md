@@ -15,8 +15,10 @@ The simplest, most trivial browser extension, featuring:
 * https://developer.chrome.com/extensions/getstarted
 
 API
-* permissions https://developer.chrome.com/extensions/declare_permissions#manifest
-
+* permission field
+  * permission ids https://developer.chrome.com/extensions/declare_permissions#manifest
+  * match patterns https://developer.chrome.com/extensions/match_patterns
+  
 ```json
 	"permissions": [
 		"alarms",
@@ -41,3 +43,17 @@ API
 		"webNavigation"
 	],
 ```
+
+Capabilities
+* intercept requests https://developer.chrome.com/extensions/webRequest
+* TODO proxy? https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
+* modify request result = not possible? proxy
+  * achievable with content script + https://intoli.com/blog/sandbox-breakout/
+  
+Techniques
+* communicate between contexts https://dev.to/christiankaindl/a-webextension-guide-36ag
+* using modules https://medium.com/front-end-weekly/es6-modules-in-chrome-extensions-an-introduction-313b3fce955b
+
+
+See also
+* TODO https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices

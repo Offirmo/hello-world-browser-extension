@@ -1,50 +1,53 @@
 {
 	"manifest_version": 2,
 	"name": "hello-world-browser-extension",
-	"short_name": "hello world browser ext.",
+	"description": "Test of a webextension",
 	"version": "0.1",
 	"homepage_url": "https://github.com/Offirmo/hello-world-browser-extension",
-
-	"description": "Test of a webextension",
+	"short_name": "hello world browser ext.",
 	"icons": {
-		"48": "icons/icon_48x48.png",
-		"96": "icons/icon_96x96.png"
+		"96": "icons/icon_96x96.png",
+		"48": "icons/icon_48x48.png"
 	},
 
 	"browser_action": {
 		"default_icon": "icons/icon_48x48.png",
 		"default_title": "hello-world-browser-extension browser_action icon !",
-		"default_popup": "popup.html"
+		"default_popup": "ui/popup.html"
 	},
 
 	"permissions": [
 		"contextMenus",
 		"debugger",
 		"notifications",
-		"storage"
+		"storage",
+		"webRequest",
+		"<all_urls>"
 	],
 	"background": {
-		"persistent": false,
-		"scripts": ["background.js"]
+		"page": "background.html"
 	},
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
 			"run_at": "document_start",
-			"js": ["content-start.js"]
+			"js": ["content-scripts/start.js"]
 		},
 		{
 			"matches": ["<all_urls>"],
 			"run_at": "document_end",
-			"js": ["content-end.js"]
+			"js": ["content-scripts/end.js"]
 		},
 		{
 			"matches": ["<all_urls>"],
 			"run_at": "document_idle",
-			"js": ["content-idle.js"]
+			"js": ["content-scripts/idle.js"]
 		}
 	],
+	"devtools_page": "ui/devtools.html",
 	"options_ui": {
-		"page": "options.html"
-	}
+		"page": "ui/options.html"
+	},
+	"web_accessible_resources": [
+	]
 }
