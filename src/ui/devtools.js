@@ -26,9 +26,10 @@ chrome.devtools.panels.create(
 	PANEL_NAME,
 	'../icons/icon_48x48.png', // works only on FF
 	// Chrome and FF have different paths
-	get_browser() === 'Firefox'
+	'/ui/devtools-panel.html',
+/*	get_browser() === 'Firefox'
 		? './devtools-panel.html'
-		: 'ui/devtools-panel.html',
+		: 'ui/devtools-panel.html',*/
 	(panel) => {
 		// code invoked on panel creation
 		console.log(`🧩 [T=${+Date.now()}] Hello from devtools panel "${PANEL_NAME}" creation!`, panel)

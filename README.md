@@ -46,7 +46,7 @@ API
 
 Capabilities
 * intercept requests https://developer.chrome.com/extensions/webRequest
-* TODO proxy? https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
+* TODO proxy? NOT SUPPORTED ON CHROME https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy
 * modify request result = not possible? proxy
   * achievable with content script + https://intoli.com/blog/sandbox-breakout/
   

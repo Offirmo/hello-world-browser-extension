@@ -22,9 +22,27 @@ get_current_tab()
 document.addEventListener('click', event => {
 	try {
 		const { target: clickedElement } = event
-		if (!clickedElement)
-			throw new Error('click event has no target!')
-		console.log('on click', { ...clickedElement})
+		if (!clickedElement || !clickedElement.id)
+			return
+
+		console.log('on click', clickedElement.id)
+		switch(clickedElement.id) {
+			case 'notify': {
+				chrome.notifications.create(
+					{
+						"type": "basic",
+						"iconUrl": chrome.extension.getURL("icons/icon_48x48.png"),
+						"title": "hello-world-browser-extension notification",
+						"message": "hello-world-browser-extension notif from background"
+					}
+				)
+				break
+			}
+
+			default:
+				console.warn(`Unknown clickable id: "${clickedElement.id}!`)
+				break
+		}
 	} catch (err) {
 		console.error('on click', err)
 	}
