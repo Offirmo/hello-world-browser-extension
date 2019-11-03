@@ -25,7 +25,7 @@
 		"<all_urls>"
 	],
 	"background": {
-		"page": "background.html"
+		"page": "background/background.html"
 	},
 	"content_scripts": [
 		{
